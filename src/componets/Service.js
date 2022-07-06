@@ -62,6 +62,8 @@ const Services = () => {
         {array.map((arr) => (
           <>
             <Flex
+              as={"a"} 
+              href="/serviceprovider"
               height="300px"
               bg="#FFFEFF"
               width={isLargerThan48 ? "32%" : "full"}

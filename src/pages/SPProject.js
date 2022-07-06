@@ -13,8 +13,7 @@ import Comments from '../componets/Comments';
 import AddProject from '../componets/AddProject';
 
   
-const DetailsSP = () => {
-
+function SPProject() {
     const array = [
         {
           id: 1,
@@ -39,7 +38,7 @@ const DetailsSP = () => {
   return (
     <>
    
-    <Flex m={"4rem"} minH={'100vh'} direction={{ base: 'column', md: 'row' }} backgroundImage={""}>
+    <Flex m={"4rem"} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Stack maxH={'40vh'} flex={2}>
         <Image
           alt={'Login Image'}
@@ -64,27 +63,57 @@ const DetailsSP = () => {
                 bg: '#076467',
                 zIndex: -1,
               }}>
-              مشروع  
+              Freelance
             </Text>
             <br />{' '}
             <Text color={'#076467'} as={'span'}>
-             الماجدية ١٢١
+              Design Projects
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'black'}>
-            <p><strong>
-            يدعم ⁦‪مشروع‬⁩ ⁦‪الماجدية‬⁩ ١٢١ توجهنا في أن نصبح يد العون الأولى فيما يخص المساكن والعقارات، بمواصفات ومقاييس تتناسب مع احتياجات العميل وتطلعاته، مُظهراً التزام ⁦‪الماجدية‬⁩ بمعايير جودة الحياة وحرصها على تحقيق رغبات المتملك لمنزله.
-            </strong></p>
-
-            
+            <strong>
+                The project board is an exclusive resource for contract work. It's
+                perfect for freelancers, agencies, and moonlighters.
+            </strong>
           </Text>
+          <Button  
+            as={"a"} 
+            href=""
+            loadingText="Submitting"
+            size="lg"
+            bg={"#076467"}
+            color={"white"}
+            _hover={{
+            bg: "#076467",
+            }}
+            >
+            حذف المشروع 
+          </Button>
       </Stack>
     </Flex>
-  
+    
 
-    {/* <Comments/> */}
+    <Center>
+      <Button  
+      as={"a"} 
+      href="/add-project"
+      loadingText="Submitting"
+      m={"2rem"}
+      w={'30%'}
+      size="md"
+      bg={"#076467"}
+      color={"white"}
+      _hover={{
+      bg: "#076467",
+      }}
+      >
+      إضافة مشروع  
+      </Button>
+    </Center>
+
+
     </>
     )
 }
 
-export default DetailsSP
+export default SPProject

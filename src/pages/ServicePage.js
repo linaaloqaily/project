@@ -14,6 +14,7 @@ import {
   FaUserTie,
   FaStar
 } from "react-icons/fa";
+import Divder from '../componets/Divder';
 
 const ServicePage = () =>  {
     const [isLargerThan48] = useMediaQuery("(min-width: 48em)");
@@ -26,7 +27,6 @@ const ServicePage = () =>  {
       email: "M@M.com",
       address: "Ryiadh-King Fahad Road",
       icon: FaUserTie,
-      icon1: FaStar
     },
     {
       id: 2,
@@ -35,7 +35,6 @@ const ServicePage = () =>  {
       email: "S@S.com",
       address: "Ryiadh-King Fahad Road",
       icon: FaUserTie,
-      icon1: FaStar
 
     },
     {
@@ -45,7 +44,6 @@ const ServicePage = () =>  {
       email: "Sara@S.com",
       address: "Qassim-King Fahad Road",
       icon: FaUserTie,
-      icon1: FaStar
 
     },
     {
@@ -55,19 +53,18 @@ const ServicePage = () =>  {
       email: "A@A.com",
       address: "Jeddah-King Fahad Road",
       icon: FaUserTie,
-      icon1: FaStar
 
     },
   ];
   return (
     <VStack id="app-services">
       <VStack spacing={4} align="center">
-        <Heading as="h2" size="3xl" noOfLines={1} color={"#5E5542"} mt="2rem">
+        <Heading as="h1" color={"#5E5542"} mt="2rem" mb="1rem" >
             مستـعدين لخـدمتك
         </Heading>
       </VStack>
       <Flex
-        minH="100vh"
+        minH="75vh"
         alignItems="center"
         justifyContent="space-between"
         w="full"
@@ -83,7 +80,7 @@ const ServicePage = () =>  {
               width={isLargerThan48 ? "32%" : "full"}
               shadow="lg"
               p="6"
-              m="2"
+              m="3"
               boxShadow={"2xl"}
               rounded={"md"}
               alignItems="center"
@@ -99,10 +96,11 @@ const ServicePage = () =>  {
               <Text color="#5E5542" fontSize="xl">رقم الجوال: {arr.phoneNumber}</Text>
               <Text color="#5E5542" fontSize="xl">البريد الإلكتروني: {arr.email}</Text>
               <Text color="#5E5542" fontSize="xl">الموقع: {arr.address}</Text>
-              <Icon as={arr.icon1} boxSize={6} color="#076467" mb="5" mt="2rem" />
 
                 <ButtonGroup >
-                    <Button   gap='4'
+                    <Button
+                        mb="5" 
+                        mt="2rem" 
                         as={"a"}
                         href={"/details"}
                         loadingText="Submitting"
@@ -115,7 +113,9 @@ const ServicePage = () =>  {
                     >
                         مشاريعي  
                     </Button>
-                    <Button  gap='4'
+                    <Button  
+                        mb="5" 
+                        mt="2rem"
                         as={"a"} 
                         href="/appointment"
                         loadingText="Submitting"

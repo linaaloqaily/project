@@ -1,43 +1,60 @@
 import React from 'react'
 import {
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
-    TableContainer,
+    Box,
     Center,
-  } from '@chakra-ui/react'
+    useColorModeValue,
+    FormControl,
+    Input,
+    FormLabel,
+
+  } from '@chakra-ui/react';
+
 function MyAppoint() {
+  
   return (
-    // <Center >
-        <TableContainer height={"100vh"} p={"10rem"} >
-  <Table border="2px" borderColor="#5E5542" variant='striped' colorScheme="gray">
-    <Thead>
-      <Tr>
-      <Th>اسم مقدم الخدمة</Th>
-        <Th>التاريخ</Th>
-        <Th >الوقت</Th>
-      </Tr>
-    </Thead>
-    <Tbody>
-      <Tr>
-        <Td>inches</Td>
-        <Td>millimetres (mm)</Td>
-        <Td>25.4</Td>
-      </Tr>
-      <Tr>
-        <Td>feet</Td>
-        <Td>centimetres (cm)</Td>
-        <Td >30.48</Td>
-      </Tr>
-    </Tbody>
-  </Table>
-</TableContainer>
-    // </Center>
+    <> 
+    <Center height={"100vh"} py={12}>
+
+    
+      <Box
+        maxW={'320px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.900')}
+        boxShadow={'2xl'}
+        rounded={'lg'}
+        p={6}
+        alignItems={"center"}
+        >
+       <FormControl mb="2">
+          <FormLabel color="#076467" mb="1rem"><strong>اسم مقدم الخدمة :</strong></FormLabel>
+          <Input readOnly type="text">محمد بدر</Input>
+        </FormControl>
+        <FormControl>
+          <FormLabel color="#076467" mb="1rem"><strong>الوقت والتاريخ:</strong></FormLabel>
+          <Input readOnly type="text">20 jul</Input>
+        </FormControl>
+      </Box>
+
+      <Box
+        maxW={'320px'}
+        w={'full'}
+        bg={useColorModeValue('white', 'gray.900')}
+        boxShadow={'2xl'}
+        rounded={'lg'}
+        p={6}
+        alignItems={"center"}
+        >
+       <FormControl mb="2">
+          <FormLabel color="#076467" mb="1rem"><strong>اسم مقدم الخدمة :</strong></FormLabel>
+          <Input readOnly type="text">سعد خالد</Input>
+        </FormControl>
+        <FormControl>
+          <FormLabel color="#076467" mb="1rem"><strong>الوقت والتاريخ:</strong></FormLabel>
+          <Input readOnly type="text">20 jul</Input>
+        </FormControl>
+      </Box>
+    </Center>
+    </>
   )
 }
 

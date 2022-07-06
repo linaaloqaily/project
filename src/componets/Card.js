@@ -32,8 +32,9 @@ const Card = () => {
       </Flex>
       <Spacer />
 
-      <Box mr={isLargerThan62 ? "6" : "0"} w={isLargerThan62 ? "60%" : "full"}>
+      <Box mr={isLargerThan62 ? "4" : "0"} w={isLargerThan62 ? "60%" : "full"} >
         <Text
+          m={"1rem"}
           fontSize={isLargerThan62 ? "5xl" : "4xl"}
           color={"#5E5542"}
           fontWeight="bold"
@@ -43,13 +44,14 @@ const Card = () => {
           نبذة عنا
         </Text>
 
-        <Text mb="6" fontSize={isLargerThan62 ? "lg" : "base"} opacity={0.7} color={"black"}>
+        <Text m={"1rem"} mb="6" fontSize={isLargerThan62 ? "lg" : "base"} opacity={0.7} color={"black"}>
           نجمع لك جميع المهندوسون المحترفين والمقاولين ونوفر لك افضل الخدمات
         </Text>
 
         <Button
           as={"a"}
           href="/sginup"
+          m={"1rem"}
           w="200px"
           colorScheme="#5E5542"
           variant="solid"

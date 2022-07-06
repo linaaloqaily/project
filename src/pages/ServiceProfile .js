@@ -20,9 +20,10 @@ import { useState } from "react";
 import { Link as ReachLink } from "react-router-dom";
 import Avatar from "react-avatar";
 
-const Profile = () => {
+const ServiceProfile = () => {
   return (
     <Flex
+      backgroundImage={"./img/n86.png"}
       minH={"100vh"}
       align={"center"}
       justify={"center"}
@@ -49,27 +50,41 @@ const Profile = () => {
               <Box>
                 <FormControl id="firstName" isRequired>
                   <FormLabel>الأسم الاول</FormLabel>
-                  <Input type="text" />
+                  <Input borderRadius={"2rem"} type="text" />
                 </FormControl>
               </Box>
               <Box>
-                <FormControl id="lastName">
+                <FormControl id="lastName" isRequired>
                   <FormLabel>الأسم الأخير</FormLabel>
-                  <Input type="text" />
+                  <Input borderRadius={"2rem"} type="text" />
                 </FormControl>
               </Box>
             </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>البريد الألكتروني</FormLabel>
-              <Input type="email" />
+              <Input borderRadius={"2rem"} type="email" />
+            </FormControl>
+            <FormControl id="text" isRequired>
+              <FormLabel>العنوان </FormLabel>
+              <Input borderRadius={"2rem"} type="text" />
+            </FormControl>
+            <FormControl id="email">
+              <FormLabel>نبذه عني:</FormLabel>
+              <Input borderRadius={"2rem"} type="email" />
             </FormControl>
             <FormControl id="mobile" isRequired>
               <FormLabel>رقم الجوال</FormLabel>
-              <Input type="number" />
+              <Input borderRadius={"2rem"} type="number" />
             </FormControl>
+            <FormControl id="file" isRequired>
+              <FormLabel>شهادة الإعتماد </FormLabel>
+              <Input border={"none"} type="file" />
+            </FormControl>
+           
 
             <Stack spacing={10} pt={2}>
               <Button
+                borderRadius={"2rem"}
                 loadingText="Submitting"
                 size="lg"
                 bg={"#5E5542"}
@@ -88,4 +103,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ServiceProfile;

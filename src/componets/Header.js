@@ -15,8 +15,9 @@ const Header = () => {
       h={"100vh"}
       px={0}
       backgroundImage={"url(https://g.top4top.io/p_2376lsm1h1.png)"}
-      backgroundSize={"cover"}
-      backgroundPosition={"center center"}
+      backgroundSize={"contain" }
+      backgroundRepeat={"no-repeat"}
+      backgroundPosition={"center  center"}
     >
       <VStack
         w={"full"}

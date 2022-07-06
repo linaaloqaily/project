@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Link as ReachLink } from "react-router-dom";
 import {
   Flex,
@@ -10,10 +10,14 @@ import {
   Link,
   Button,
   useColorModeValue,
+  Textarea,
 } from "@chakra-ui/react";
-const LoginPage = () => {
+import Navbar from './Navbar';
+
+function AddProject() {
   return (
-    <Flex
+    <>
+      <Flex
       minH={"100vh"}
       align={"center"}
       justify={"center"}
@@ -27,25 +31,20 @@ const LoginPage = () => {
           p={8}
         >
           <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>البريد الألكتروني</FormLabel>
-              <Input type="email" />
+            <FormControl>
+              <FormLabel>اسم المشروع: </FormLabel>
+              <Input type="text" />
             </FormControl>
-            <FormControl id="password">
-              <FormLabel>كملة السر</FormLabel>
-              <Input type="password" />
+            <FormControl>
+              <FormLabel> تفاصيل المشروع: </FormLabel>
+              <Textarea type="text" />
+            </FormControl>
+            <FormControl id="file" isRequired>
+              <FormLabel>صورة المشروع: </FormLabel>
+              <Input border={"none"} type="file" />
             </FormControl>
             <Stack spacing={5}>
-              <Stack
-                direction={{ base: "column", sm: "row" }}
-                align={"start"}
-                justify={"space-between"}
-              >
-                <Link color={"black"}>هل نسيت كلمة المرور؟</Link>
-                <Link as={ReachLink} to="/sginup" color={"#5E5542"}>
-                  إنشاء حساب جديد
-                </Link>
-              </Stack>
+              
               <Stack
                 direction={{ base: "column", sm: "row" }}
                 align={"start"}
@@ -58,14 +57,16 @@ const LoginPage = () => {
                   bg: "#5E5542",
                 }}
               >
-                تسجيل الدخول
+                إضافة
               </Button>
             </Stack>
           </Stack>
         </Box>
       </Stack>
     </Flex>
-  );
-};
+    </>
+    
+  )
+}
 
-export default LoginPage;
+export default AddProject
