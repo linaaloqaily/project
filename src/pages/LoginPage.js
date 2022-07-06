@@ -11,8 +11,12 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import Navbar from "../componets/Navbar";
 const LoginPage = () => {
+  
   return (
+    <>
+    <Navbar/>
     <Flex
       minH={"100vh"}
       align={"center"}
@@ -65,6 +69,8 @@ const LoginPage = () => {
         </Box>
       </Stack>
     </Flex>
+    </>
+
   );
 };
 

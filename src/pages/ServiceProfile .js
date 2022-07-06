@@ -19,9 +19,12 @@ import {
 import { useState } from "react";
 import { Link as ReachLink } from "react-router-dom";
 import Avatar from "react-avatar";
+import Navbar from "../componets/Navbar";
 
 const ServiceProfile = () => {
   return (
+    <>
+    <Navbar/>
     <Flex
       backgroundImage={"./img/n86.png"}
       minH={"100vh"}
@@ -100,6 +103,8 @@ const ServiceProfile = () => {
         </Box>
       </Stack>
     </Flex>
+    </>
+
   );
 };
 

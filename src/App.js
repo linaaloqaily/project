@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter >
-      <ChakraProvider resetCSS={false}>
+      {/* <ChakraProvider resetCSS={false}> */}
         <Routes>
           <Route path="/sginup" element={<SignupPage/>}/>
           <Route path="/login" element={<LoginPage />} />
@@ -40,7 +40,7 @@ function App() {
           
         </Routes>
         <Footer/>
-        </ChakraProvider>
+        {/* </ChakraProvider> */}
       </BrowserRouter>
     </div>
   );

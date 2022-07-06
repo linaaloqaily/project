@@ -11,6 +11,7 @@ import {
   } from '@chakra-ui/react';
 import Comments from '../componets/Comments';
 import AddProject from '../componets/AddProject';
+import Navbar from '../componets/Navbar';
 
   
 function SPProject() {
@@ -37,7 +38,7 @@ function SPProject() {
       ];
   return (
     <>
-   
+   <Navbar/>
     <Flex m={"4rem"} minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
       <Stack maxH={'40vh'} flex={2}>
         <Image
@@ -50,7 +51,7 @@ function SPProject() {
       </Stack>
       <Stack maxH={'40vh'} p={8} flex={2} align={'center'} justify={'center'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
-            <Text
+          <Text
               as={'span'}
               position={'relative'}
               _after={{
@@ -63,24 +64,25 @@ function SPProject() {
                 bg: '#076467',
                 zIndex: -1,
               }}>
-              Freelance
+              مشروع  
             </Text>
             <br />{' '}
             <Text color={'#076467'} as={'span'}>
-              Design Projects
+             الماجدية ١٢١
             </Text>{' '}
           </Heading>
           <Text fontSize={{ base: 'md', lg: 'lg' }} color={'black'}>
-            <strong>
-                The project board is an exclusive resource for contract work. It's
-                perfect for freelancers, agencies, and moonlighters.
-            </strong>
+            <p><strong>
+            يدعم ⁦‪مشروع‬⁩ ⁦‪الماجدية‬⁩ ١٢١ توجهنا في أن نصبح يد العون الأولى فيما يخص المساكن والعقارات، بمواصفات ومقاييس تتناسب مع احتياجات العميل وتطلعاته، مُظهراً التزام ⁦‪الماجدية‬⁩ بمعايير جودة الحياة وحرصها على تحقيق رغبات المتملك لمنزله.
+            </strong></p>
+
+            
           </Text>
           <Button  
             as={"a"} 
             href=""
             loadingText="Submitting"
-            size="lg"
+            size="md"
             bg={"#076467"}
             color={"white"}
             _hover={{

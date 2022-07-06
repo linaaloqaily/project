@@ -15,6 +15,7 @@ import {
   FaStar
 } from "react-icons/fa";
 import Divder from '../componets/Divder';
+import Navbar from '../componets/Navbar';
 
 const ServicePage = () =>  {
     const [isLargerThan48] = useMediaQuery("(min-width: 48em)");
@@ -57,7 +58,9 @@ const ServicePage = () =>  {
     },
   ];
   return (
-    <VStack id="app-services">
+    <>
+      <Navbar/>
+      <VStack id="app-services">
       <VStack spacing={4} align="center">
         <Heading as="h1" color={"#5E5542"} mt="2rem" mb="1rem" >
             مستـعدين لخـدمتك
@@ -136,6 +139,7 @@ const ServicePage = () =>  {
         ))}
       </Flex>
     </VStack>
+    </>
   )
 }
 

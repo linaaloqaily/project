@@ -8,11 +8,13 @@ import {
     FormLabel,
 
   } from '@chakra-ui/react';
+import Navbar from './Navbar';
 
-function MyAppoint() {
+const MyAppoint = () => {
   
   return (
     <> 
+    <Navbar/>
     <Center height={"100vh"} py={12}>
 
     

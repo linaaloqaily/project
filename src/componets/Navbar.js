@@ -54,6 +54,10 @@ const Navbar = () => {
             fontWeight={400}
             variant={"link"}
             href={"/"}
+                color={"black"}
+                _hover ={{
+                  color: "#5E5542",
+                }}
           >
             الصفحة الرئيسة
           </Button>
@@ -70,7 +74,7 @@ const Navbar = () => {
               cursor={"pointer"}
               minW={0}
             >
-              <Avatar name="Anhar" color="#5E5542" size="40" round={true} />
+              <Avatar name="Lina" color="#5E5542" size="40" round={true} />
             </MenuButton>
             <MenuList>
               <MenuItem as={ReachLink} to="/profile">

@@ -20,6 +20,7 @@ import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { Link as ReachLink } from "react-router-dom";
 import { RadioCard } from "../componets/radio-card";
+import Navbar from "../componets/Navbar";
 const SignupPage = () => {
   const options = ["عميل", "مقاول", "مهندس", "مشرف"];
 
@@ -32,7 +33,9 @@ const SignupPage = () => {
   const group = getRootProps();
 
   return (
-    <Flex
+    <>
+      <Navbar/>
+      <Flex
       minH={"100vh"}
       align={"center"}
       justify={"center"}
@@ -120,6 +123,7 @@ const SignupPage = () => {
         </Box>
       </Stack>
     </Flex>
+    </>
   );
 };
 

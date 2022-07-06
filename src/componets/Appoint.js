@@ -9,6 +9,7 @@ import {
     useColorModeValue,
   } from '@chakra-ui/react';
   import Divder from '../componets/Divder';
+import Navbar from './Navbar';
 
 
 const Appoint = () => {
@@ -31,7 +32,8 @@ const Appoint = () => {
   ];
 
   return (
-    <> 
+    <>
+    <Navbar/> 
     <Center height={"100vh"} py={6}>
 
       <Box

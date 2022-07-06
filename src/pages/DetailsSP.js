@@ -11,10 +11,11 @@ import {
   } from '@chakra-ui/react';
 import Comments from '../componets/Comments';
 import AddProject from '../componets/AddProject';
+import Navbar from '../componets/Navbar';
 
   
 const DetailsSP = () => {
-
+  
     const array = [
         {
           id: 1,
@@ -38,7 +39,7 @@ const DetailsSP = () => {
       ];
   return (
     <>
-   
+   <Navbar/>
     <Flex m={"4rem"} minH={'100vh'} direction={{ base: 'column', md: 'row' }} backgroundImage={""}>
       <Stack maxH={'40vh'} flex={2}>
         <Image

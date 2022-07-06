@@ -17,6 +17,7 @@ import Navbar from './Navbar';
 function AddProject() {
   return (
     <>
+    <Navbar/>
       <Flex
       minH={"100vh"}
       align={"center"}
